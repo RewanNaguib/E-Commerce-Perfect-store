@@ -1,0 +1,41 @@
+.font{
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 28px;
+    font-weight: lighter;
+    color: black;
+    margin-top: 1.5cm;
+    margin-bottom: 1.5cm;
+
+}
+
+.photo{
+    width: 100px;
+    height: 100px;
+}
+
+#bord, #bord1, #bord2, #bord3{
+    /* color:grey; */
+    border:none;
+
+}
+
+#bord4{
+    color:grey;
+    border:none;
+}
+#bord5{
+    color:grey;
+    border:none;
+}
+
+.txt{
+    color:grey;  
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+
+
+

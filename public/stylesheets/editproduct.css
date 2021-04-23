@@ -1,0 +1,26 @@
+.font{
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 28px;
+    font-weight: lighter;
+    color: black;
+    margin-top: 1.5cm;
+    margin-bottom: 1.5cm;
+
+}
+.form-control{
+width: 70%;
+border: solid 1px black;
+}
+
+.btn{
+font-family: 'Lexend Mega', sans-serif;
+border: black solid 1px ;
+color: black;    
+}
+
+
+.photo{
+   
+    width: 200px;
+    height: 200px;
+}

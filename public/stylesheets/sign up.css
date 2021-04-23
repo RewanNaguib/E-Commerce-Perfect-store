@@ -1,0 +1,37 @@
+.jumbotron{
+  margin:80px;
+  font-family: 'Lexend Mega', sans-serif;
+  color: #222;
+
+  
+}
+::placeholder { 
+ color: #ff0000;
+  opacity: 0.7; 
+  font-size: smaller;
+}
+.inputs{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  padding-top: 30px;
+  
+}
+
+.display-5{
+  margin-bottom:1.5cm;
+}
+
+.title{
+  margin-right: 320px;
+}
+
+.title1{
+  margin-right: 365px;
+}
+
+.title2{
+  margin-right: 340px;
+}
+
+

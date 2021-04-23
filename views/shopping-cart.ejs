@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="/stylesheets/shoppingcart.css" />
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    
+        <div class="container">
+            <h1 class="font">Shopping Cart</h1>
+         </div>
+         <% if (products){%>
+    
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"> </th>
+                                <th scope="col">Item Name</th>
+                                <th scope="col">Image</th>
+                                <th scope="col" class="text-center">Quantity</th>
+                                <th scope="col" class="text-right">Price</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% products.forEach(function(products){%>
+                            <tr>
+                                <td> </td>
+                                <td><%=products.productname%></td>
+                                <td><img src=<%= products.img%> class="photo"/></td>
+                              <td class="row d-flex justify-content-center"><input class="form-control" type="number" value=<%=products.quantity%> /></td>
+                                <td class="text-right"><%=products.price%> €</td>
+                               
+                                <td class="text-right"><button class="btn btn-sm btn-white" id="deletebtn"> <a style="color: white;" href="/dashboard/<%=products.id%>/remove/"><i class="fa fa-trash"></i></a> </button> </td>
+                            </tr>
+                            <% }) %>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><strong>Total</strong></td>
+                                <td class="text-right"><strong><%=totalPrice%> €</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col mb-2">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <a href="/dashboard">
+                        <button class="btn btn-lg btn-block btn-dark text-uppercase">Continue Shopping</button>
+                    </a>
+                    </div>
+                    <div class="col-sm-12 col-md-6 text-right">
+                        <a href="/checkout">
+                        <button class="btn btn-lg btn-block btn-dark text-uppercase">Checkout</button>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 2.5cm;">
+        <%- include("partials/footer.ejs") %>  
+    </div>
+    <%} else {%>
+        <div class="container" style="margin-top: 10rem;">
+            <h2 style="text-align: center;">No Items in Cart</h2>
+    </div>
+    <%}%>
+    
+    </body>
+</html>

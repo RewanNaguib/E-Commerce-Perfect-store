@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/order.css" />
+</head>
+
+<body>
+    <%- include("partials/header.ejs") %>
+
+
+        <div class="container">
+            <h1 class="font">Orders Summary</h1>
+        </div>
+
+        <div class="container mb-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <%orders.forEach(function(orders) {%>
+                        <table class="table table-striped" style="border: 2px solid black;">
+                            <thead>
+                               
+                               
+                                <tr style="background-color:#f2f2f2; color:grey; font-size: 20px;">
+                                    <th scope="col"> </th>
+                                    <th scope="col">User Name: <%=orders.username%></th>
+                                    <th scope="col">User Id: <%=orders.user_id%></th>
+                                    <th scope="col" class="text-center">Address: <%=orders.address%> </th>
+                                    <th scope="col"></th>
+                                    <th> </th>
+                                </tr>
+                               
+                                <tr>
+                                    <th scope="col"> </th>
+                                    <th scope="col">Item Name</th>
+                                    <th scope="col">Item Id</th>
+                                    <th scope="col" class="text-center">Quantity</th>
+                                    <th scope="col" class="text-right">Price</th>
+                                    <th> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% orders.cart.forEach(function (b){%>
+                                <tr>
+                                    <td><img src=<%= b.img%> class="photo"/> </td>
+                                    <td><%=b.productname%></td>
+                                    <td><%=b.id%></td>
+                                    <td class="row d-flex justify-content-center"><%=b.quantity%></td>
+                                    <td class="text-right"><%= b.price%> €</td>
+                                    <td class="text-right"> </td>
+                                </tr>
+                                <%})%>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                     <td class="txt"><strong>Total Quantity</strong></td>
+                                    <td class="txt text-right"><strong><%=orders.totalQty%></strong></td>
+                                </tr>
+                                <tr style="background-color: white;">
+                                    <td  id="bord"></td>
+                                    <td  id="bord1"></td>
+                                    <td  id="bord2"></td>
+                                    <td  id="bord3"></td>
+                                    <td  id="bord4"><strong>Total Price</strong></td>
+                                    <td class="text-right" id="bord5" ><strong><%=orders.totalprice%> €</strong></td>
+                                </tr>
+                                <%})%>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+               
+                        
+                    </div>
+                </div>
+                <div class="col mb-2">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3"></div>
+                        <div class="col-sm-12 col-md-6">
+                            <a href="/">
+                            <button class="btn btn-lg btn-block btn-dark text-uppercase" style="margin-top:1cm;"><strong>Confirm</strong></button>
+                        </a>
+                        </div>
+                        <div class="col-sm-12 col-md-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <div style="margin-top: 2cm;">
+            <%- include("partials/footer.ejs") %>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+.font{
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 28px;
+    font-weight: lighter;
+    color: black;
+    margin-top: 1.5cm;
+    margin-bottom: 1.5cm;
+
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.form-control{
+ 
+  
+    width: 100px; 
+  
+}
+
+#deletebtn{
+    background-color:red;
+    color: white;
+
+}
+#deletebtn:hover {
+    color:black;
+  }
+#deletebtn1{
+    background-color:red;
+    color: white;
+}
+#deletebtn1:hover {
+    color:black;
+  }
+#deletebtn2{
+    background-color:red;
+    color: white;
+
+}
+#deletebtn2:hover {
+    color:black;
+  }
+  .photo{
+    width: 150px;
+    height: 150px;
+}
+
+

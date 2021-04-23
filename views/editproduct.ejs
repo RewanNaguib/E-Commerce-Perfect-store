@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Product</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/editproduct.css" />
+
+  </head>
+  <body>
+    
+    <%- include("partials/header.ejs") %>
+
+   <div class="container">
+
+     <h1 class="font">Edit Product</h1>
+     
+
+    <form  action="/dashboard/<%=id%>/editproduct?_method=PUT"" method="POST" enctype="multipart/form-data">
+      
+      <div class="form-group">
+        <label for="exampleInputproduct">Product Name</label>
+        <input type="text" name="product_name" class="form-control" id="exampleInputproduct" value=<%=productname%> >
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPrice">Price</label>
+        <input type="text" name="price" class="form-control" id="exampleInputPrice" value=<%=price%> >
+      </div>
+
+      <p>Edit Image</p>
+     
+      <img src= "../../<%=img%>" class="photo"> 
+      <ul style="list-style-type:none;">
+        <li>
+          <div class="form-group">
+            <label for="mob_no"></label>
+            <input type="file" name="uploaded_image" accept="" class="form-control-file" id="exampleInputFile"
+              aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">PLease choose the image you want to upload</small>
+          </div>
+        </li>
+       
+      </ul>
+
+      <div class="form-group" style="margin-top: 1cm;">
+        <label for="exampleInputQuantity">Quantity</label>
+        <input  type="number" name="quantity" class="form-control" id="exampleInputQuantity" value=<%=quantity%> >
+      </div>
+      
+
+      <div class="form-group">
+        <label for="exampleSelect1">Category</label>
+        <select type="text" name="category" class="form-control" id="exampleSelect1">
+          <option selected><%=category%></option>
+          <option>Women</option>
+          <option>Men</option>
+        
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleTextarea">Item Description</label>
+        <textarea type="text" name="description" class="form-control" id="exampleTextarea" rows="3" ><%=desc%></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-info">Edit</button>
+     
+     
+    </form>
+   </div>
+   
+   <div style="margin-top: 2cm;">
+   <%- include("partials/footer.ejs") %>  
+   </div>
+                
+</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>

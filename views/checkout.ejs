@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/stylesheets/checkout.css" />
+
+</head>
+
+<body>
+
+  <div class="top">
+    <%- include("partials/header.ejs") %>
+  </div>
+
+<section>
+  <div class="card">
+    <div class="card-body">
+      <div class="row" style="margin-top: 2cm;">
+        <div class="col-md-7">
+          <div class="left border">
+            <div class="row"> <span class="header">Checkout</span>
+              <div class="icons"> 
+                <img src="https://img.icons8.com/color/48/000000/visa.png" /> <img
+                  src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /> <img
+                  src="https://img.icons8.com/color/48/000000/maestro.png" /> </div>
+            </div>
+            <form action="/checkout" method="POST">
+               <span>Name:</span> <input class="shade" name="username" placeholder="Enter your name">
+              <span>Phone Number:</span> <input class="shade" name="phonenumber" placeholder="Enter your number">
+              <span>Address:</span> <input class="shade" name="address" placeholder="Enter your Address">
+              <span>Card Number:</span> <input class="shade" name="cardnumber" placeholder="0125 6780 4567 9909">
+              <div class="row">
+                <div class="col-4"><span>Expiry date:</span> <input class="shade" placeholder="YY/MM"> </div>
+                <div class="col-4"><span>CVV:</span> <input class="shade" id="cvv"> </div>
+              </div> <input type="checkbox" id="save_card" class="align-left"> <label for="save_card">Save card details
+                to wallet</label>
+            
+
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="right border">
+            <div class="header">Order Summary</div>
+            <hr>
+
+            <div class="row lower">
+              <div class="col text-left"><b>Total to pay</b></div>
+              <div class="col text-right"><b><%=total%> €</b></div>
+            </div>
+            <div class="row lower">
+            </div> <button class="btn" type="submit">Place order</button>
+            <p class="text-muted text-center">Complimentary Shipping & Returns</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</section>
+  <div style="margin-top: 2cm;">
+  
+    <%- include("partials/footer.ejs") %>
+  </div>
+
+</body>
+
+</html>

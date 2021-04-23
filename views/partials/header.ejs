@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/header.css" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white">
+    <a class="navbar-brand" href="/">Perfect 
+        <svg class="heart1" viewBox="0 0 32 29.6">
+          <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+        c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+        </svg>
+        Store</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> <!--  drop down list when shrinking -->
+
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        
+
+    </div>
+
+    <form class="form-inline my-2 my-lg-0">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+         <!--<li class="nav-item">
+            <a class="nav-link" href="sign_up">Create An Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sign_in">Sign In </a>
+           
+          </li>-->
+          <% if(currentUser){ %>
+            <li id="user" class="dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <%= currentUser %>
+              </a>
+              <% if (currentUser=="admin"){ %>
+              <div
+                class="dropdown-menu dropdown-menu-right"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+              <a class="dropdown-item" href="/add_product"
+              > Add New Product</a
+            >
+                <a class="dropdown-item" href="/order"
+                  > Orders</a
+                >
+                <a class="dropdown-item" href="/Sign_out"
+                  ><i class="bi bi-box-arrow-left"></i> &nbsp;Sign_out</a
+                >
+              </div>
+              <% }else{ %>
+                <div
+                class="dropdown-menu dropdown-menu-right"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" href="/shopping-cart"
+                  ><i class="bi bi-cart"></i>&nbsp; Shopping-Cart</a
+                >
+                <a class="dropdown-item" href="/edituser"
+                  ><i class="bi bi-gear"></i> &nbsp;Manage Your Profile</a
+                >
+                <a class="dropdown-item" href="/Sign_out"
+                  ><i class="bi bi-box-arrow-left"></i> &nbsp;Sign_out</a
+                >
+              </div>
+            </li>
+           
+              <%}%>
+            <%}else{%>
+            <li class="dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                User Managment
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/sign_in"
+                  ><i class="bi bi-box-arrow-in-right"></i>&nbsp; Sign In</a
+                >
+                <a class="dropdown-item" href="/sign_up">
+                  <i class="bi bi-person-plus"></i>&nbsp;
+                  Sign Up </a>
+              </div>
+            </li>
+            <%}%>
+        </ul>
+
+    </form>
+   
+
+  </nav>
+  <h1 class=" d-flex justify-content-center" id="logo">Perfect &nbsp;
+    <svg class="heart" viewBox="0 0 32 29.6">
+      <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+    c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+    </svg>
+    &nbsp; Store
+  </h1>
+
+
+</body>
+
+</html>
+

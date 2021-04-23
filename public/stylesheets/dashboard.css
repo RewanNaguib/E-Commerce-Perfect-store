@@ -1,0 +1,33 @@
+#image{
+    width: 370px;
+    height: 400px;
+}
+.box{
+    padding: 10px;
+}
+.btn1{
+    
+    font-family: 'Lexend Mega', sans-serif;
+border: black solid 1px ;
+
+
+color: black;
+
+    
+    
+}
+/* i{
+    margin-right: 1cm;
+} */
+
+i:hover {
+    color:red;
+  }
+
+
+  /* styling search 
+  style="border-left: none;border-right: none;border-top: none;border-color: black;
+                  border-radius: 0%;"  */
+
+
+          

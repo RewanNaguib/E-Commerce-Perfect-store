@@ -1,0 +1,194 @@
+.sale{
+      width: 100%;
+      background-color: red;
+      position: relative;
+  text-align: center;
+  color: white;
+  border: solid black 1px;
+    
+     
+    }
+
+    #image{
+     padding: 50px;
+     padding-bottom: 20px;
+    }
+
+    
+    #right_image{
+      padding: 50px;
+      padding-bottom: 20px;
+     }
+     #left_image{
+      padding: 50px;
+      padding-bottom: 20px;
+     }
+
+ 
+
+    .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.font1{
+  font-family: 'Lexend Mega', sans-serif;
+            font-size: xx-large;
+            font-weight: lighter;
+            color: black;
+}
+
+.font2{
+            font-family: 'Lexend Mega', sans-serif;
+            font-size: 20px;
+            font-weight: lighter;
+            color: black;
+}
+
+.font3{
+            font-family: 'Lexend Mega', sans-serif;
+            font-size: 20px;
+            font-weight: lighter;
+            color: white;
+}
+/* check the font color black or white ?!!!! */
+.salefont1{
+  font-family: 'Lexend Mega', sans-serif;
+            font-size: 80px;
+            font-weight: lighter;
+            color: red;
+
+}
+.salefont2{
+  font-family: 'Lexend Mega', sans-serif;
+            font-size: 30px;
+            font-weight: lighter;
+            color: red;
+
+}
+
+.btn{
+  font-family: 'Lexend Mega', sans-serif;
+  border: black solid 1px ;
+  background-color: transparent;
+}
+
+.btn1{
+  font-family: 'Lexend Mega', sans-serif;
+  border: white solid 1px ;
+  background-color: transparent;
+  color: white;
+}
+
+#border1{
+  margin-top: 50px;
+  
+  border: solid black 1px;
+  padding-bottom: 15px;
+}
+
+
+#border2{
+  margin-top: 50px;
+  
+  border: solid black 1px;
+  padding-bottom: 15px;
+}
+
+
+@media (max-width:800px) {
+
+ 
+
+  .btn{
+    font-family: 'Lexend Mega', sans-serif;
+    border: black solid 1px ;
+    background-color: transparent;
+    font-size: 10px;
+  }
+  .btn1{
+    font-family: 'Lexend Mega', sans-serif;
+    border: white solid 1px ;
+    background-color: transparent;
+    color: white;
+    font-size: 10px;
+  }
+
+  #image{
+ padding: 50px;
+ padding-bottom: 20px;
+ width: 100%;
+}
+
+
+#right_image{
+  padding: 50px;
+  padding-bottom: 20px;
+  width: 100%;
+ }
+
+ #left_image{
+  padding: 50px;
+  padding-bottom: 20px;
+  width: 100%;
+ }
+
+
+
+
+.font1{
+font-family: 'Lexend Mega', sans-serif;
+        font-size: large;
+        font-weight: lighter;
+        color: black;
+}
+
+.font2{
+        font-family: 'Lexend Mega', sans-serif;
+        font-size: 10px;
+        font-weight: lighter;
+        color: black;
+}
+
+.font3{
+        font-family: 'Lexend Mega', sans-serif;
+        font-size: 10px;
+        font-weight: lighter;
+        color: white;
+}
+/* check the font color black or white ?!!!! */
+.salefont1{
+font-family: 'Lexend Mega', sans-serif;
+        font-size: 35px;
+        font-weight: lighter;
+        color: red;
+
+}
+.salefont2{
+font-family: 'Lexend Mega', sans-serif;
+        font-size: 15px;
+        font-weight: lighter;
+        color: red;
+
+}
+
+
+
+#border1{
+margin-top: 50px;
+
+border: solid black 1px;
+padding-bottom: 15px;
+}
+
+
+#border2{
+margin-top: 50px;
+
+border: solid black 1px;
+padding-bottom: 15px;
+}
+
+}
